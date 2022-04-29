@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1om16mc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <bpmn:process id="Process_1qekmox" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0tph9je</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_129o22z">
+      <bpmn:incoming>Flow_05agrjy</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0tph9je" sourceRef="StartEvent_1" targetRef="registrarUsuario" />
+    <bpmn:sequenceFlow id="Flow_0zt945o" sourceRef="registrarUsuario" targetRef="SolicitarCredito" />
+    <bpmn:sequenceFlow id="Flow_05agrjy" sourceRef="SolicitarCredito" targetRef="Event_129o22z" />
+    <bpmn:userTask id="registrarUsuario" name="Registro de Usuario" camunda:formKey="form_1.form">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_0tph9je</bpmn:incoming>
+      <bpmn:outgoing>Flow_0zt945o</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="SolicitarCredito" name="Solicitud de Credito" camunda:formKey="form_2.form">
+      <bpmn:incoming>Flow_0zt945o</bpmn:incoming>
+      <bpmn:outgoing>Flow_05agrjy</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1qekmox">
+      <bpmndi:BPMNEdge id="Flow_0tph9je_di" bpmnElement="Flow_0tph9je">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zt945o_di" bpmnElement="Flow_0zt945o">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="460" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05agrjy_di" bpmnElement="Flow_05agrjy">
+        <di:waypoint x="560" y="117" />
+        <di:waypoint x="632" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_129o22z_di" bpmnElement="Event_129o22z">
+        <dc:Bounds x="632" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1hdbsm9_di" bpmnElement="registrarUsuario">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1m9o0yt_di" bpmnElement="SolicitarCredito">
+        <dc:Bounds x="460" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

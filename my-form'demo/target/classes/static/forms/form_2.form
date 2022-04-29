@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "text": "# Solicitud de credito",
+      "type": "text",
+      "id": "Field_0oh8gkk"
+    },
+    {
+      "label": "Monto",
+      "type": "textfield",
+      "id": "Field_028rnsj",
+      "key": "monto"
+    },
+    {
+      "values": [
+        {
+          "label": "Hipotecario",
+          "value": "hipotecario"
+        },
+        {
+          "label": "Personal",
+          "value": "personal"
+        }
+      ],
+      "label": "Tipo",
+      "type": "radio",
+      "id": "Field_0zjhsqv",
+      "key": "tipo"
+    }
+  ],
+  "type": "default",
+  "id": "form2",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}

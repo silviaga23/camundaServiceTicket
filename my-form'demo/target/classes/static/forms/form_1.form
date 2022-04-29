@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "text": "# Registro de usuario",
+      "type": "text",
+      "id": "Field_0fk30w5"
+    },
+    {
+      "label": "Nombre",
+      "type": "textfield",
+      "id": "Field_0fuyjqb",
+      "key": "nombre"
+    },
+    {
+      "label": "Primer apellido",
+      "type": "textfield",
+      "id": "Field_0jwt9eo",
+      "key": "apellido1"
+    },
+    {
+      "label": "Segundo apellido",
+      "type": "textfield",
+      "id": "Field_0cdohgi",
+      "key": "apellido2"
+    }
+  ],
+  "type": "default",
+  "id": "form1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.0.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  },
+  "schemaVersion": 4
+}
